@@ -1,7 +1,8 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { createStackNavigator } from 'react-navigation';
 
-export default class App extends React.Component {
+class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
@@ -21,3 +22,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+
+export default createStackNavigator({
+  Home: App
+}, {
+  navigationOptions: {
+    title: 'Hola mundo desde la Home',
+  }
+})

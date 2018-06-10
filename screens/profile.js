@@ -8,19 +8,21 @@ import {
 
 class Profile extends Component {
   navigate = () => {
+    this.props.navigation.navigate('Login')
   }
   render() {
     return (
       <View style={styles.container}>
         <Text>Profile Page</Text>
         <Button
-          title="Ir al perfil"
+          title="Ir al login"
           onPress={this.navigate}
         />
       </View>
     )
   }
 }
+
 
 
 const styles = StyleSheet.create({

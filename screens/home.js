@@ -8,6 +8,8 @@ import {
 
 class Home extends Component {
   navigate = () => {
+    console.log(this.props)
+    this.props.navigation.navigate('Profile')
   }
   render() {
     return (

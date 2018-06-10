@@ -8,13 +8,14 @@ import {
 
 class About extends Component {
   navigate = () => {
+    this.props.navigation.navigate('Home')
   }
   render() {
     return (
       <View style={styles.container}>
         <Text>About Page</Text>
         <Button
-          title="Ir al perfil"
+          title="Volver a la home"
           onPress={this.navigate}
         />
       </View>

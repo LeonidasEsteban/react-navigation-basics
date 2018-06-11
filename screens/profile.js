@@ -11,10 +11,17 @@ class Profile extends Component {
     console.log(this.props)
     this.props.navigation.navigate('Login')
   }
+  static navigationOptions = ({ navigation }) => {
+    return {
+      title: navigation.getParam('nombre', 'Perfil'),
+      // header: <Text>{navigation.getParam('nombre', 'Perfil')}</Text>
+    }
+  }
   render() {
     return (
       <View style={styles.container}>
         <Text>Profile Page</Text>
+        <Text>{this.props.navigation.getParam('nombre')}</Text>
         <Button
           title="Ir al login"
           onPress={this.navigate}

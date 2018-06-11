@@ -9,7 +9,9 @@ import {
 class Home extends Component {
   navigate = () => {
     console.log(this.props)
-    this.props.navigation.navigate('Profile')
+    this.props.navigation.navigate('Profile', {
+      nombre: 'Pantalla de perfil',
+    })
   }
   render() {
     return (

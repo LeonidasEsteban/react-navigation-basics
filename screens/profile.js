@@ -13,9 +13,17 @@ class Profile extends Component {
   }
   static navigationOptions = ({ navigation }) => {
     return {
-      title: navigation.getParam('nombre', 'Perfil'),
+      title: `${navigation.getParam('nombre', 'Perfil')} ${navigation.getParam('counter', 0)}`,
       // header: <Text>{navigation.getParam('nombre', 'Perfil')}</Text>
     }
+  }
+  setParams = () => {
+    const {
+      navigation
+    } = this.props;
+    navigation.setParams({
+      counter: navigation.getParam('counter', 0) + 1
+    });
   }
   render() {
     return (
@@ -25,6 +33,10 @@ class Profile extends Component {
         <Button
           title="Ir al login"
           onPress={this.navigate}
+        />
+        <Button
+          title="Set Title ++"
+          onPress={this.setParams}
         />
       </View>
     )

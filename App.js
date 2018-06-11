@@ -1,5 +1,5 @@
 import React from 'react';
-// import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView, StatusBar } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 
 import Home from './screens/home';
@@ -30,7 +30,23 @@ export default createStackNavigator({
   initialRouteKey: 'inicio',
   // paths: [],
   navigationOptions: {
-    title: 'ola ke ase'
+    title: 'Un titulo muy bonito y largo largo',
+    // fallback de headerTitle y usado para tabBarLabel or drawerLabel
+    // header: (
+    //   <SafeAreaView style={{backgroundColor: 'purple'}}>
+    //     <Text style={{color: 'white'}}>Awesome Header</Text>
+    //   </SafeAreaView>
+    // ),
+    // headerTitle: 'header title',
+    headerTitleAllowFontScaling: true,
+    headerBackImage: <Text>{`<=`}</Text>,
+    headerBackTitle: 'Atras',
+    headerTruncatedBackTitle: 'A',
+    headerForceInset: {
+      top: 50,
+      // vertical: 100,
+    },
+    gesturesEnabled: true,
   },
   // CONFIGURACIONES VISUALES
   // mode: 'modal', // card (default)

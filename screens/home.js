@@ -15,6 +15,7 @@ class Home extends Component {
     return (
       <View style={styles.container}>
         <Text>Home Page</Text>
+        <Text>El nombre es {this.props.navigation.getParam('nombre')}</Text>
         <Button
           title="Ir al perfil"
           onPress={this.navigate}

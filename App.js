@@ -22,7 +22,13 @@ export default createStackNavigator({
     screen: About
   }
 }, {
-
+  // CONFIGURACIONES
+  initialRouteName: 'Home',
+  initialRouteParams: {
+    nombre: 'Leonidas Esteban'
+  },
+  initialRouteKey: 'inicio',
+  // paths: [],
   navigationOptions: {
     title: 'ola ke ase'
   },

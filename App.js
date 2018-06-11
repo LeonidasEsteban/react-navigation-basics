@@ -22,7 +22,40 @@ export default createStackNavigator({
     screen: About
   }
 }, {
+
   navigationOptions: {
-    title: 'Hola mundo desde la Home',
-  }
+    title: 'ola ke ase'
+  },
+  // CONFIGURACIONES VISUALES
+  // mode: 'modal', // card (default)
+  headerMode: 'float',
+  // card | screen | none
+  // float default en iOS, header fijo en pantalla,
+  // screen default en Android, header entra con la pantalla,
+  headerTransitionPreset: 'fade-in-place',
+  //headerMode float tiene que estar activo
+  //fade-in-place: hace un fadeIn en la pantalla
+  //uikit: movimiento de izquierda a derecha
+  cardStyle: {
+    backgroundColor: 'white',
+  },
+  // estilo al componente que envuelve al screen
+  // transitionConfig: (data) => {
+  //   // console.log(data);
+  //   return {
+  //     containerStyle: {
+  //       // borderWidth: 10,
+  //       backgroundColor: 'black',
+  //     },
+  //     transitionSpec: {
+  //       duration: 3000
+  //     }
+  //   }
+  // },
+  // onTransitionStart: (data) => {
+
+  // },
+  // onTransitionEnd: ({ navigation }) => {
+  //   // navigation.navigate('Home');
+  // }
 })
